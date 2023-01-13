@@ -420,13 +420,13 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
               togglePlayPause={togglePlayPause}
               resetControlTimeout={resetControlTimeout}
               showControls={showControls}
-              onPressRewind={() =>
+              onPressRewind={() => {
                 onPressRewind();
-                videoRef?.current?.seek(currentTime - rewindTime)
-              }
+                videoRef?.current?.seek(currentTime - rewindTime);
+              }}
               onPressForward={() =>{
                 onPressForward();
-                videoRef?.current?.seek(currentTime + rewindTime)
+                videoRef?.current?.seek(currentTime + rewindTime);
               }}
             />
             <BottomControls
