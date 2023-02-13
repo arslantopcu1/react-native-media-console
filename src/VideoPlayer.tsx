@@ -12,6 +12,7 @@ import {
   TopControls,
   BottomControls,
   PlayPause,
+  Overlay,
 } from './components';
 import {PlatformSupport} from './OSSupport';
 import {_onBack} from './utils';
@@ -29,6 +30,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
     resizeMode = 'contain',
     isFullscreen = false,
     showOnStart = false,
+    showOnEnd = false,
     paused = false,
     muted = false,
     volume = 1,
@@ -64,6 +66,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
     disableTimer = false,
     disableSeekbar = false,
     disablePlayPause = false,
+    disableSeekButtons = false,
     navigator,
     rewindTime = 15,
   } = props;
@@ -127,7 +130,12 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
     if (currentTime < duration) {
       setCurrentTime(duration);
       setPaused(true);
+
+      if (showOnEnd) {
+        setShowControls(true);
+      }
     }
+
     if (typeof onEnd === 'function') {
       onEnd();
     }
@@ -401,6 +409,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
         ) : (
           <>
             <Error error={error} />
+            <Overlay animations={animations} />
             <TopControls
               panHandlers={volumePanResponder.panHandlers}
               animations={animations}
@@ -416,6 +425,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
             <PlayPause
               animations={animations}
               disablePlayPause={disablePlayPause}
+              disableSeekButtons={disableSeekButtons}
               paused={_paused}
               togglePlayPause={togglePlayPause}
               resetControlTimeout={resetControlTimeout}

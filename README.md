@@ -1,19 +1,19 @@
 # 🕹 react-native-media-console
-[![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20tvOS-brightgreen.svg?style=flat-square&colorB=191A17)](https://github.com/react-native-tvos/react-native-tvos)
-[![GitHub issues](https://img.shields.io/github/issues/criszz77/react-native-media-console)](https://github.com/criszz77/react-native-media-console/issues)
-[![GitHub](https://img.shields.io/github/license/criszz77/react-native-media-console)](https://github.com/criszz77/react-native-media-console/blob/master/LICENSE)
-[![GitHub top language](https://img.shields.io/github/languages/top/criszz77/react-native-media-console)](https://github.com/criszz77/react-native-media-console/search?l=typescript)
-[![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/criszz77/react-native-media-console/graphs/contributors)
-[![npm](https://img.shields.io/npm/v/react-native-media-console)](https://www.npmjs.com/package/react-native-media-console)
+[![platforms][3]][4]
+[![GitHub issues][5]][6]
+[![GitHub][7]][8]
+[![GitHub top language][9]][10]
+[![Maintenance][11]][12]
+[![npm][13]][14]
 <!-- [![ci][1]][2] -->
 
-VideoPlayer for the React Native `<Video/>` component at [react-native-video](https://github.com/react-native-community/react-native-video).
+VideoPlayer for the React Native `<Video/>` component at [react-native-video][15].
 
-[![demogif](https://user-images.githubusercontent.com/55203625/159137837-4e34a8be-1cbb-48ae-9d67-99ce4922e660.gif)](https://user-images.githubusercontent.com/55203625/159138065-cf3554b6-3f8b-4cab-bf94-0f3fc0b57333.gif)
+[![demogif][16]][17]
 
 ## ⭐️ Features
 
-This package contains a simple set of GUI controls that work with the [react-native-video](https://github.com/react-native-community/react-native-video) `<Video>` component. 
+This package contains a simple set of GUI controls that work with the [react-native-video][15] `<Video>` component. 
 - [x] Back Button
 - [x] Volume bar
 - [x] Fullscreen button
@@ -36,12 +36,12 @@ Run `yarn add react-native-video react-native-media-console`
 If you are using TypeScript, you will also need to run `yarn add --dev @types/react-native-video`
 
 Then follow installation instructions
-from [react-native-video](https://github.com/react-native-video/react-native-video).
+from [react-native-video][15].
 
 ## 🛠 Usage
 
 The `<VideoPlayer>` component follows the API of the `<Video>` component
-at [react-native-video](https://github.com/react-native-community/react-native-video). It also takes a number of
+at [react-native-video][15]. It also takes a number of
 additional props which are outlined in the [API](#-api) section.
 
 For basic operation the `<VideoPlayer>` component requires a video source and a navigator property. The default back
@@ -71,28 +71,29 @@ The `<VideoPlayer>` component can take a number of inputs to customize it as nee
 
 ### Props
 
-You can pass any of the props that the `<Video />` component at [react-native-video](https://github.com/react-native-community/react-native-video) takes. Simply add them onto the `<VideoPlayer />` and it will pass them through to the `<Video />` component.
+You can pass any of the props that the `<Video />` component at [react-native-video][15] takes. Simply add them onto the `<VideoPlayer />` and it will pass them through to the `<Video />` component.
 
 In addition, the `<VideoPlayer />` also takes these props:
 
-| Prop                         | Type         | Default | Description                                                                                                                                                     |
-|------------------------------|--------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| controlAnimationTiming       | Integer      | 500   | The amount of time (in milliseconds) to animate the controls in and out.                                                                                        |
-| controlTimeoutDelay          | Integer      | 15000 | Hide controls after X amount of time in milliseconds                                                                                                            |                           |
-| doubleTapTime                | Integer      | 130   | Tapping twice within this amount of time in milliseconds is considered a double tap. Single taps will not be actioned until this time has expired.              |
-| isFullscreen                 | Boolean      | false | The VideoPlayer fullscreen state                                                                                                                                |
-| navigator                    | Navigator    | null  | When using the default React Native navigator and do not override the `onBack` function, you'll need to pass the navigator to the VideoPlayer for it to function |
-| rewindTime                   | Integer      | 15    | Number of seconds to rewind or forward.                                                                                                                         |
-| seekColor                    | String(#HEX) | '#FFF' | Fill/handle colour of the seekbar                                                                                                                               |
-| showDuration                 | Boolean      | false | Show duration of the media.                                                                                                                                     |
-| showOnStart                  | Boolean      | false | Show or hide the controls on first render                                                                                                                       |
-| showTimeRemaining            | Boolean      | false | If true, show the time remaing, else show the current time in the Player.                                                                                       |
-| showHours                    | Boolean      | false | If true, convert time to hours in the Player                                                                                                                    |
-| tapAnywhereToPause           | Boolean      | false | If true, single tapping anywhere on the video (other than a control) toggles between playing and paused.                                                        |
+| Prop                | Type         | Default | Description                                                                                                                                                     |
+|---------------------|--------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| controlAnimationTiming | Integer      | 500   | The amount of time (in milliseconds) to animate the controls in and out.                                                                                        |
+| controlTimeoutDelay | Integer      | 15000 | Hide controls after X amount of time in milliseconds                                                                                                            |                           |
+| doubleTapTime       | Integer      | 130   | Tapping twice within this amount of time in milliseconds is considered a double tap. Single taps will not be actioned until this time has expired.              |
+| isFullscreen        | Boolean      | false | The VideoPlayer fullscreen state                                                                                                                                |
+| navigator           | Navigator    | null  | When using the default React Native navigator and do not override the `onBack` function, you'll need to pass the navigator to the VideoPlayer for it to function |
+| rewindTime          | Integer      | 15    | Number of seconds to rewind or forward.                                                                                                                         |
+| seekColor           | String(#HEX) | '#FFF' | Fill/handle colour of the seekbar                                                                                                                               |
+| showDuration        | Boolean      | false | Show duration of the media.                                                                                                                                     |
+| showOnStart         | Boolean      | false | Show or hide the controls on first render                                                                                                                       |
+| showOnEnd    | Boolean      | false | Show or hide the controls on end of video                                                                                                                       |
+| showTimeRemaining   | Boolean      | false | If true, show the time remaing, else show the current time in the Player.                                                                                       |
+| showHours           | Boolean      | false | If true, convert time to hours in the Player                                                                                                                    |
+| tapAnywhereToPause  | Boolean      | false | If true, single tapping anywhere on the video (other than a control) toggles between playing and paused.                                                        |
 | toggleResizeModeOnFullscreen | Boolean      | false | If true, clicking the fullscreen button will toggle the `<Video />` component between cover/contain, set to false if you want to customize fullscreen behaviour |
-| containerStyles              | ViewStyle    |       | StyleSheet passed to the container of the <Video /> component                                                                                                   |
-| videoStyle                   | ViewStyle    |       | StyleSheet passed to the <Video /> component                                                                                                                    |
-| videoRef                     | Video        | undefined  | Pass ref to the `<Video/>` component                                                                                                                            |
+| containerStyle      | ViewStyle    |       | StyleSheet passed to the container of the <Video /> component                                                                                                   |
+| videoStyle          | ViewStyle    |       | StyleSheet passed to the <Video /> component                                                                                                                    |
+| videoRef            | Video        | undefined  | Pass ref to the `<Video/>` component                                                                                                                            |
 
 ### Events
 
@@ -118,6 +119,7 @@ These are the various controls that you can turn on/off as needed. All of these 
 | ----------------- | -------------------------- |
 | disableFullscreen | Hide the fullscreen button |
 | disablePlayPause  | Hide the play/pause toggle and the rewind/forward buttons |
+| disableSeekButtons  | Hide the rewind/forward buttons (but not play/pause) |
 | disableSeekbar    | Hide the seekbar           |
 | disableVolume     | Hide the Volume control    |
 | disableTimer      | Hide the timer             |
@@ -130,10 +132,36 @@ These are the various controls that you can turn on/off as needed. All of these 
 - Seek doesn't work correctly on Android: https://github.com/react-native-video/react-native-video/issues/2230#issuecomment-892982288
 - Could not find com.yqritc:android-scalablevideoview:1.0.4: https://github.com/react-native-video/react-native-video/issues/2454#issuecomment-913709132
 
-[1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
-[2]: https://github.com/criszz77/react-native-media-console/actions
-
 ## 📃 License
 
 > 📃 This project is released under the [MIT License](LICENSE). \
 > 💻 By contributing, you agree that your contributions will be licensed under its MIT License.
+
+## 🏆 Sponsors
+
+|                           |                                |
+|---------------------------|--------------------------------|
+| [![jetbrains100][18]][19] | [![englishdislogo100][20]][21] |
+
+
+[1]: https://github.com/criszz77/react-native-media-console/workflows/ci/badge.svg
+[2]: https://github.com/criszz77/react-native-media-console/actions
+[3]: https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20tvOS-brightgreen.svg?style=flat-square&colorB=191A17
+[4]: https://github.com/react-native-tvos/react-native-tvos
+[5]: https://img.shields.io/github/issues/criszz77/react-native-media-console
+[6]: https://github.com/criszz77/react-native-media-console/issues
+[7]: https://img.shields.io/github/license/criszz77/react-native-media-console
+[8]: https://github.com/criszz77/react-native-media-console/blob/master/LICENSE
+[9]: https://img.shields.io/github/languages/top/criszz77/react-native-media-console
+[10]: https://github.com/criszz77/react-native-media-console/search?l=typescript
+[11]: https://img.shields.io/maintenance/yes/2023
+[12]: https://github.com/criszz77/react-native-media-console/graphs/contributors
+[13]: https://img.shields.io/npm/v/react-native-media-console
+[14]: https://www.npmjs.com/package/react-native-media-console
+[15]: https://github.com/react-native-video/react-native-video
+[16]: https://user-images.githubusercontent.com/55203625/159137837-4e34a8be-1cbb-48ae-9d67-99ce4922e660.gif
+[17]: https://user-images.githubusercontent.com/55203625/159138065-cf3554b6-3f8b-4cab-bf94-0f3fc0b57333.gif
+[18]: https://user-images.githubusercontent.com/55203625/213786907-b95dfb4b-08bf-4449-a055-72edf401da23.png
+[19]: https://www.jetbrains.com/
+[20]: https://user-images.githubusercontent.com/55203625/213786736-1d0226de-f810-4ece-968f-08c81c769948.png
+[21]: https://englishdiscoveries.page.link/fJc4

@@ -56,6 +56,13 @@ export interface VideoPlayerProps extends VideoProperties {
   showOnStart?: boolean;
 
   /**
+   * Show or hide the controls on end of video
+   *
+   * @default false
+   */
+  showOnEnd?: boolean;
+
+  /**
    * Title of the video
    */
   title?: string;
@@ -190,6 +197,14 @@ export interface VideoPlayerProps extends VideoProperties {
    * @default false
    */
   disablePlayPause?: boolean;
+
+  /**
+   * Hide the rewind/forward buttons without hiding the play/pause button
+   *
+   * @default false
+   */
+  disableSeekButtons?: boolean;
+
   /**
    * When using the default React Native navigator and do not override the `onBack` function,
    * you'll need to pass the navigator to the VideoPlayer for it to function
