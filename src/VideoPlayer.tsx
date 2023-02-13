@@ -421,8 +421,9 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
               resetControlTimeout={resetControlTimeout}
               showControls={showControls}
               onPressRewind={() => {
-                onPressRewind();
-                videoRef?.current?.seek(currentTime - rewindTime);
+                if(onPressRewind()){            
+                  videoRef?.current?.seek(currentTime - rewindTime);
+                }
               }}
               onPressForward={() =>{
                 onPressForward();
