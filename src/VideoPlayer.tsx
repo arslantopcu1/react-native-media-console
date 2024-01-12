@@ -60,6 +60,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
     containerStyle = {},
     seekColor = '',
     source,
+    textTracks,
     disableBack = false,
     disableVolume = false,
     disableFullscreen = false,
@@ -403,6 +404,7 @@ export const VideoPlayer = (props: VideoPlayerProps) => {
           rate={rate}
           style={[_styles.player.video, styles.videoStyle]}
           source={source}
+          textTracks={textTracks}
         />
         {loading ? (
           <Loader animations={animations} />
